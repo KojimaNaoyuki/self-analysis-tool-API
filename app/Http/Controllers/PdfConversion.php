@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 
 class PdfConversion extends Controller
 {
-    public function getPdf()
+    public function getPdf(Request $request)
     {
+
+
         $item = null;
 
         if ($item) {
