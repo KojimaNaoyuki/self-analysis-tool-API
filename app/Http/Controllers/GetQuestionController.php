@@ -19,7 +19,7 @@ class GetQuestionController extends Controller
 
         if ($items) {
             return response()->json([
-                'data' => $items
+                'data' => $items,
             ], 200);
         } else {
             return response()->json([
