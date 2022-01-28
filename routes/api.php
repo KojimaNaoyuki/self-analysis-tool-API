@@ -4,6 +4,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PdfConversion;
 use App\Http\Controllers\GetQuestionController;
+use App\Http\Controllers\PostQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,5 +25,11 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //PDF処理
 Route::get('/getPdf', [PdfConversion::class, 'getPdf']);
 
-//質問をレスポンス
+//質問を取得
 Route::get('/getQuestion', [GetQuestionController::class, 'getQuestion']);
+
+//質問を追加
+Route::get('/postQuestion', [PostQuestionController::class, 'postQuestion']);
+
+//質問を更新
+Route::get('/updateQuestion', [PostQuestionController::class, 'updateQuestion']);

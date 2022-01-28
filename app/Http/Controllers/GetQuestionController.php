@@ -9,6 +9,7 @@ class GetQuestionController extends Controller
 {
     public function getQuestion(Request $request)
     {
+        //質問を職業から全件取得
         $jobData = Job::where('name', $request->jobName)->get();
 
         if (count($jobData) != 0) {
